@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vote-config
+data:
+  OPTION_1: Pita
+  OPTION_2: Hala
+  REDIS_HOST: redis
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: result-config
+data:
+  POSTGRES_HOST: db
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: worker-config
+data:
+  POSTGRES_HOST: db
+  REDIS_HOST: redis 
