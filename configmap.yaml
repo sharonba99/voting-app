@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: worker-config
+data:
+  REDIS_HOST: "redis"
+  POSTGRES_HOST: "db"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: result-config
+data:
+  POSTGRES_HOST: "db"
+  OPTION_A: "Pita"
+  OPTION_B: "Lafa"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vote-config
+data:
+  REDIS_HOST: "redis"
+  OPTION_A: "Pita"
+  OPTION_B: "Lafa"
